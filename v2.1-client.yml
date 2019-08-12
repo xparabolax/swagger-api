@@ -68,6 +68,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Contact'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   ContactResponse:
     properties:
@@ -100,6 +103,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Course'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   CourseResponse:
     properties:
@@ -198,6 +204,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/DistrictAdmin'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   DistrictAdminResponse:
     properties:
@@ -215,6 +224,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/District'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   DistrictResponse:
     properties:
@@ -437,6 +449,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/SchoolAdmin'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   SchoolAdminResponse:
     properties:
@@ -468,6 +483,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/School'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   SchoolResponse:
     properties:
@@ -583,6 +601,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Section'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   SectionResponse:
     properties:
@@ -786,6 +807,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Student'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   StudentResponse:
     properties:
@@ -849,6 +873,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Teacher'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   TeacherResponse:
     properties:
@@ -888,6 +915,9 @@ definitions:
     properties:
       object:
         $ref: '#/definitions/Term'
+      previous_attributes:
+        additionalProperties:
+          type: object
     type: object
   TermResponse:
     properties:
@@ -905,6 +935,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/ContactObject'
       type: object
@@ -912,6 +944,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/ContactObject'
       type: object
@@ -919,16 +953,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/ContactObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   courses.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/CourseObject'
       type: object
@@ -936,6 +971,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/CourseObject'
       type: object
@@ -943,16 +980,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/CourseObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   districtadmins.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictAdminObject'
       type: object
@@ -960,6 +998,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictAdminObject'
       type: object
@@ -967,16 +1007,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictAdminObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   districts.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictObject'
       type: object
@@ -984,6 +1025,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictObject'
       type: object
@@ -991,16 +1034,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/DistrictObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   schooladmins.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolAdminObject'
       type: object
@@ -1008,6 +1052,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolAdminObject'
       type: object
@@ -1015,16 +1061,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolAdminObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   schools.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolObject'
       type: object
@@ -1032,6 +1079,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolObject'
       type: object
@@ -1039,16 +1088,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SchoolObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   sections.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SectionObject'
       type: object
@@ -1056,6 +1106,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SectionObject'
       type: object
@@ -1063,16 +1115,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/SectionObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   students.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/StudentObject'
       type: object
@@ -1080,6 +1133,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/StudentObject'
       type: object
@@ -1087,16 +1142,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/StudentObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   teachers.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TeacherObject'
       type: object
@@ -1104,6 +1160,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TeacherObject'
       type: object
@@ -1111,16 +1169,17 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TeacherObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
   terms.created:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TermObject'
       type: object
@@ -1128,6 +1187,8 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TermObject'
       type: object
@@ -1135,11 +1196,10 @@ definitions:
     allOf:
     - $ref: '#/definitions/Event'
     - properties:
+        type:
+          type: string
         data:
           $ref: '#/definitions/TermObject'
-        previous_attributes:
-          additionalProperties:
-            type: object
       type: object
 host: api.clever.com
 info:
